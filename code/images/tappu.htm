@@ -1,0 +1,564 @@
+
+<!-- saved from url=(0053)http://scholarships.gov.in/RENEWAL/studentRegfrmPrint -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="language" content="en_US">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+ <link rel="stylesheet" href="./tappu_files/datepicker.css">
+ <link rel="stylesheet" href="./tappu_files/bootstrap.min.css">
+        <link rel="stylesheet" href="./tappu_files/bootstrap-theme.min.css">
+       <link rel="stylesheet" href="./tappu_files/jquery.dataTables.min.css">     
+        <script src="./tappu_files/jquery-1.12.4.min.js.download"></script>
+        <script src="./tappu_files/bootstrap-datepicker.js.download"></script>
+        <script src="./tappu_files/jquery.dataTables.min.js.download"></script>
+        <script src="./tappu_files/bootstrap.min.js.download"></script>
+        <script src="./tappu_files/bootbox.min.js.download"></script>
+        <script src="./tappu_files/sql.js.download"></script>
+        <link rel="stylesheet" href="./tappu_files/font-awesome.min.css">
+       
+        <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {
+       min-height:600px;
+       max-height: 1000px
+    }
+    .bgdiv
+    {
+        background: white;
+    }
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color:white;
+      height: 100%;
+    }
+    div.containerborder {
+    z-index: 10;
+	background-color: #ffffff;
+	padding: 0 !important;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	border: 1px solid #ddd;
+	margin-top: 2px;
+	margin-left: 50px;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	background-clip: padding-box;
+	opacity: 0.97;
+	filter: alpha(opacity = 97);
+     }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 1200px) {
+      .sidenav {
+        height: auto;
+        padding: 0px;
+      }
+      .row.content {height: auto;
+      }
+     
+    }
+  </style>
+        <style>
+            body{
+                font-family: 'Roboto', sans-serif;
+                padding: 0;
+                margin: 0;
+                background-color: while;
+            }
+            .top-bar{
+                background-color: #272727;
+                color: #e8e8e8;
+                padding: 10px 0;
+                font-size: .9em;
+                box-shadow: 0px 2px 3px #999;
+            }
+            .top-bar ul.inline{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .top-bar ul.inline li{
+                display: inline;
+            }
+            .top-bar a{
+                color: #e2e2e2;
+                text-decoration: none;
+            }
+            
+            
+            
+            /**
+            Helper Classes
+            **/
+            .inline{
+                display: inline;
+            }
+            .block{
+                display: block;
+            }
+            .inline-block{
+                display: inline-block;
+            }
+            .left{
+                float: left;
+            }
+            .right{
+                float: right;
+            }
+            .clear{
+                clear: both;
+            }
+            .tp-bg{
+                background-color: rgba(0,0,0,.5) !important;
+            }
+            .bg-orange{
+                background-color: #f36e21 !important;
+            }
+            .bg-grey{
+                background-color: #dadada !important;
+            }
+            
+            .white-text{
+                color: #fff !important;
+            }
+            
+            .padding-5{
+                padding: 5px;
+            }
+            .padding-10{
+                padding: 10px;
+            }
+            .padding-15{
+                padding: 15px;
+            }
+            .padding-20{
+                padding: 20px;
+            }
+            .padding-25{
+                padding: 25px;
+            }
+            .padding-30{
+                padding: 30px;
+            }
+            .no-padding{
+                padding: 0;
+            }
+            .no-margin{
+                margin: 0;
+            }
+            
+            .gap-type-default{
+                height: .75em;
+            }
+            .gap-type-1{
+                height: 5px;
+            }
+            .gap-type-2{
+                height: 10px;
+            }
+            .gap-type-3{
+                height: 15px;
+            }
+            .gap-type-4{
+                height: 20px;
+            }
+          .user {
+  border: 0px solid red;
+  float: right;
+  padding-right: 5%;
+  padding-top: 2%;
+}
+            .instituteName{
+                /* border: 1px solid red; */
+                  width: 100%;
+                  text-align: center;
+                  margin: 0 auto;
+                  padding-top: 8px;
+                  font-size: 20px;
+                  color: #004892;
+                  font-weight: bold;
+            }
+            .branding{
+              border: 0px solid red;
+              float: left;
+              width: 100%;
+              height: 17%;
+              background-color: #fff;
+            }
+           .bar {
+                width: 100%;
+                height: 23%;
+                background-color: #4866af;
+                color: white;
+                text-align: right;
+              }
+                    .leftPanel{
+                border: 0px solid green;
+                width: 34%;
+                float: left;
+                height: 100%;
+              }
+             .Image {
+                width: 11%;
+                height: 10%;
+                margin-left: 3%;
+                margin-top: 2%;
+              }
+                .Image img {
+                  width: 100%;
+                }
+              .middlePanel {
+                /* border: 1px solid green; */
+                width: 35%;
+                float: left;
+                margin-top: 2%;
+              }
+              .rightPanel {
+                  border: 0px solid green;
+                  width: 31%;
+                  float: right;
+                  height: 100%;
+                  padding-top: 1.5%;
+                }
+              .txt{
+                margin-left: 17%;
+                margin-top: -5%;
+              }
+              .logOut {
+                  width: 9%;
+                  /* border: 1px solid red; */
+                  text-align: right;
+                  float: right;
+                  padding: 11px;
+                  font-weight: bold;
+                  cursor: pointer;
+                  padding-right: 44px;
+                  color: white !important;
+                }
+                a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: wheat;
+}
+        </style>
+           
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Cache-Control" content="must-revalidate">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="DownloadOptions" content="nosave">    
+<script language="javascript">
+ 
+function openPage(reg){
+oFormObject = document.forms['frm2'];
+oFormObject.action=reg;
+oFormObject.target="_self";
+oFormObject.submit();
+}
+</script>
+    </head>
+<body>
+
+<form action="http://scholarships.gov.in/RENEWAL/studentRegfrmPrint" id="frm2" method="post" target="_blank">
+<input type="hidden" name="TOKENID" value="CNS2t7HuF2KnuTjJBOursoddDijvkjfl"><!--Token_Id-->
+</form>
+
+<header>
+    <div class="top-bar">
+        <div class="container">
+            <ul class="inline left">
+              <ul class="inline left">
+                <li>Tue Aug 01 16:20:31 IST 2017</li>
+            </ul>
+            </ul>
+            <ul class="inline right">
+                <li>
+                    <a href="http://scholarships.gov.in/RENEWAL/studentRegfrmPrint#">Skip to main content</a>
+                </li>
+                <li>|</li>
+                <li>Screen Reader Access</li>
+                <li>|</li>
+                <li>Sitemap</li>
+                <li>|</li>
+                <li>Home</li>
+                <li>|</li>
+                <li style="background-color: #565656; padding: 2px 5px;">
+                    <a href="http://scholarships.gov.in/RENEWAL/studentRegfrmPrint#">A-</a>
+                </li>
+                <li style="background-color: #565656; padding: 2px 5px;">
+                    <a href="http://scholarships.gov.in/RENEWAL/studentRegfrmPrint#">A</a>
+                </li>
+                <li style="background-color: #565656; padding: 2px 5px;">
+                    <a href="http://scholarships.gov.in/RENEWAL/studentRegfrmPrint#">A+</a>
+                </li>
+                <li style="margin-left: 5px;">Hindi</li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="branding" style="background-color: #fff">
+      <div class="leftPanel">
+          <div class="Image">
+            <img src="./tappu_files/emblem.jpg">
+          </div>
+          <div class="txt">
+            <h2 style="color: #004892; font-weight: 400">National Scholarship Portal</h2>
+            <p>
+              Ministry Of Electronics &amp; Information Technology,<br>
+              Government of India</p>
+          </div> 
+ 
+      </div>
+      <div class="middlePanel">
+        <img src="./tappu_files/srpt.jpg">
+      </div>
+      <div class="rightPanel">
+        <div style="float:left">
+          <img src="./tappu_files/dilogo.jpg">
+        </div>
+        <div class="user">
+              <p><b>Welcome:</b> PULAMOLU   TAPASWI</p>
+              <p><b>Application ID:</b> AP201516002725514</p>
+        </div>
+      </div>
+        
+    </div>
+    <div class="bar"> <div class="logOut"><a onclick="openPage(&#39;LogoutSuccess&#39;)" id="Link4">    Logout </a></div></div>
+
+</header>
+<br>
+<br>
+
+
+<div class="container-fluid">
+    <div class="row content">
+       
+    <div class="col-sm-2 sidenav">
+        <div class="sidebar-nav-fixed">
+     <div class="list-group">
+          
+        <a onclick="openPage(&#39;studentProfView&#39;)" id="Link3" class="list-group-item active text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-user"></h4> <br> Pre-Filled Information </a> 
+         <a onclick="openPage(&#39;studentRegPartOne&#39;)" id="Link1" class="list-group-item  text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-edit"></h4> <br>Apply For Renewal</a>
+       
+           
+       <a onclick="openPage(&#39;checkApplicationStatus&#39;)" id="Link2" class="list-group-item text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-transfer" style="color:green"></h4> <br> Check Your Status </a> 
+       <a onclick="openPage(&#39;changeInstPage&#39;)" id="Link3" class="list-group-item text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-edit"></h4> <br> Change Institute </a> 
+       <a onclick="openPage(&#39;studentRegfrmPrint&#39;)" id="Link3" class="list-group-item text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-print"></h4> <br> Print Your Application </a> 
+       <a onclick="openPage(&#39;chpwdPage&#39;)" id="Link3" class="list-group-item text-center" style="cursor:pointer">  <h4 class="glyphicon glyphicon-lock"></h4> <br> Change Password </a> 
+       <a onclick="openPage(&#39;LogoutSuccess&#39;)" id="Link4" class="list-group-item text-center" style="cursor:pointer">   <h4 class="glyphicon glyphicon-off" style="color:#990000"></h4> <br> Logout </a>
+</div>
+    </div>
+    </div>
+
+    <div class="col-sm-10 bgdiv">
+        <div class="containerborder">
+      
+
+
+
+
+
+
+    
+    
+    <meta name="language" content="en_US">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <link rel="stylesheet" href="./tappu_files/bootstrap.min.css" media="screen">
+
+
+
+    <script type="text/javascript">
+        function CallPrint222() {
+            var printContent = document.getElementById("txtDiv");
+
+            var Win4Print = window.open('', '', 'left=0,top=0,width=1250,height=650,top=10,left=50');
+            Win4Print.document.write(printContent.innerHTML);
+            Win4Print.document.close();
+            Win4Print.focus();
+            Win4Print.print();
+            Win4Print.close();
+        }
+        function CallPrint()
+        {
+            var divToPrint = document.getElementById('table');
+            var htmlToPrint = '' +
+                    '<style type="text/css">' +
+                    'table th, table td {' +
+                    'border:1px solid #000;' +
+                    'padding;0.5em;' +
+                    'font-size:13px;' +
+                    'text-transform: uppercase !important;'+
+                    '}' +
+                    '.spancss {' +
+                    'font-size:12px;' +
+                    'font-weight: bold;' +
+                    '}' +
+                    '.heading {' +
+                    'font-size:20px;' +
+                    'font-weight: bold;' +
+                    '}' +
+                    '.border {' +
+                    'background:#2F70A8;' +
+                    'color: #fff;' +
+                    '}' +
+            '.groupheader {'+
+                'background: #9e9e9e;'+
+                'color: #FFF;'+
+                'font-size: 12px;'+
+            '}'+
+                    '</style>';
+            htmlToPrint += divToPrint.outerHTML;
+            newWin = window.open("");
+            newWin.document.write(htmlToPrint);
+            newWin.print();
+            newWin.close();
+        }
+
+    </script>
+      
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Cache-Control" content="must-revalidate">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="DownloadOptions" content="nosave">    
+    <style type="text/css">
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 6px !important;
+    text-transform: uppercase !important;
+    
+}
+        .tbfont
+        {
+            font-size:13px;
+        }
+        .heading
+        {
+            font-size:20px;  
+        }
+        .spancss
+        {
+            font-size:12px;
+            font-weight: bold;
+        }
+        .container
+        {
+            width: 90%;
+        }
+        .border{
+                background: #FFF;
+                color:#fff;
+            }
+            .groupheader
+            {
+                background: #9e9e9e;
+                color: #FFF;
+                font-size: 12px;
+            }
+            
+            
+        @media print {
+            table, th, td
+            {
+                border-collapse:collapse;
+                border: 1px solid black;
+                width:100%;
+                text-align:right;
+            }
+            .border{
+                background: #2F70A8;
+                color:#fff;
+            }
+
+        }
+
+    </style>
+
+
+    <br>
+    <div id="txtDiv" class="container">
+
+
+        <table class="table table-bordered tbfont" id="table" cellspacing="0">
+            <tbody><tr><td colspan="4" align="center"><b><span class="heading">NATIONAL SCHOLARSHIP PORTAL 2.0</span></b></td></tr>
+            <tr class="groupheader"><td colspan="4"><b>REGISTRATION DETAILS</b></td></tr>
+            <tr><td><span class="spancss">APPLICATION ID</span></td><td>AP201516002725514</td><td><span class="spancss">RENEWAL DATE</span></td><td>01/08/2017</td></tr>
+            <tr><td><span class="spancss">APPLIED FOR SCHEME</span></td><td colspan="3">CENTRAL SECTOR SCHEME OF SCHOLARSHIPS FOR COLLEGE AND UNIVERSITY STUDENTS</td></tr>
+            <tr><td><span class="spancss">STATE OF DOMICILE</span></td><td>ANDHRA PRADESH</td><td><span class="spancss">SCHOLARSHIP CATEGORY</span></td><td></td></tr>
+            <tr><td><span class="spancss">NAME OF STUDENT</span></td><td>PULAMOLU   TAPASWI</td><td><span class="spancss">DATE OF BIRTH (DD/MM/YYYY)</span></td><td>04/10/1998</td></tr>
+            <tr><td><span class="spancss">GENDER</span></td><td>Female</td><td><span class="spancss">RELIGION</span></td><td>Hindu</td></tr>
+            <tr><td><span class="spancss">COMMUNITY/CATEGORY</span></td><td>GENERAL</td><td><span class="spancss">FATHERS NAME</span></td><td>PULAMOLU  KOTESWARARAO</td></tr>
+            <tr><td><span class="spancss">MOTHERS NAME</span></td><td>PULAMOLU   JYOTHI</td><td><span class="spancss">ANNUAL FAMILY INCOME</span></td><td>50000</td></tr>
+            <tr><td><span class="spancss">AADHAR NUMBER</span></td><td>570558590541</td><td><span class="spancss">MOBILE NUMBER</span></td><td>9948726271</td></tr>
+            <tr><td><span class="spancss">EMAIL ID</span></td><td>pulamolukoti@gmail.com</td><td><span class="spancss">DAY SCHOLAR/HOSTELER</span></td><td>Hosteler</td></tr>
+
+            
+            
+                <tr class="groupheader"><td colspan="4"><b>ACADEMIC DETAILS</b></td></tr>
+                <tr><td><span class="spancss">PRESENT INSTITUTE</span></td><td colspan="3">NATIONAL INSTITUTE OF TECHNOLOGY, WARANGAL</td></tr>
+                <tr><td><span class="spancss">PRESENT CLASS/COURSE</span></td><td>BACHELOR OF TECHNOLOGY(ELECTRICAL &amp; ELECTRONICS ENGINEERING(EEE))</td><td><span class="spancss">CLASS START DATE</span></td><td>24/07/2017</td></tr>
+                <tr><td><span class="spancss">PRESENT YEAR</span></td><td>3</td><td><span class="spancss">MODE OF STUDY</span></td><td></td></tr>
+                <tr><td colspan="2"><span class="spancss">PREVIOUS BOARD/UNIVERSITY NAME</span></td><td colspan="2">NATIONAL INSTITUTE OF TECHNOLOGY, WARANGAL</td></tr>
+                <tr><td><span class="spancss">PREVIOUS CLASS/COURSE NAME</span></td><td>BACHELOR OF TECHNOLOGY(ELECTRICAL &amp; ELECTRONICS ENGINEERING(EEE))</td><td><span class="spancss">PREVIOUS PASSING YEAR</span></td><td>2</td></tr>               
+                <tr><td><span class="spancss">PREVIOUS CLASS(%)</span></td><td>83</td><td><span class="spancss">10th CLASS ROLL NO.</span></td><td></td></tr>
+                <tr> <td><span class="spancss">10th CLASS PASSING YEAR</span></td><td></td><td><span class="spancss">10th CLASS BOARD NAME</span></td><td></td></tr>               
+                <tr><td><span class="spancss">12th CLASS ROLL NO.</span></td><td></td><td><span class="spancss">12th CLASS PASSING YEAR</span></td><td></td></tr>               
+                <tr><td colspan="2"><span class="spancss">12th CLASS BOARD NAME</span></td><td colspan="2">BOARD OF INTERMEDIATE EDUCATION , GOVT OF  A.P.</td></tr>
+               
+            
+             <tr><td><span class="spancss">ADMISSION FEE</span></td><td>4000</td><td><span class="spancss">TUITION FEE</span></td><td>70000</td></tr>               
+                <tr><td><span class="spancss">MISC FEE</span></td><td>1000</td><td colspan="2"></td></tr>               
+
+            <tr class="groupheader"><td colspan="4"><b>BASIC DETAILS</b></td></tr>
+            <tr><td><span class="spancss">IS ORPHAN</span></td><td>NO</td><td><span class="spancss">IS DISABLED</span></td><td>NO</td></tr>
+            <tr><td><span class="spancss">TYPE OF DISABILITY</span></td><td>-</td><td><span class="spancss">PERCENTAGE OF DISABILITY</span></td><td>-</td></tr>
+            <tr><td><span class="spancss">MARITAL STATUS</span></td><td>Un Married</td><td><span class="spancss">PARENTS PROFESSION</span></td><td>LSDM</td></tr>
+            <tr><td><span class="spancss">IFSC CODE</span></td><td>SBIN0016305</td><td><span class="spancss">BANK ACCOUNT NUMBER</span></td><td>20222317199</td></tr>
+
+            <tr class="groupheader"><td colspan="4"><b>CONTACT DETAILS</b></td></tr>
+            <tr><td><span class="spancss">STATE</span></td><td>ANDHRA PRADESH</td><td><span class="spancss">DISTRICT</span></td><td>KRISHNA</td></tr>
+            <tr><td><span class="spancss">BLOCK</span></td><td></td><td></td><td></td></tr>
+            <tr><td><span class="spancss">ADDRESS</span></td><td>1-109</td><td><span class="spancss">PIN CODE</span></td><td>521178</td></tr>
+            <tr><td align="center" colspan="2"><br><br><br><br><b>SIGNATURE OF CANDIDATE</b></td><td align="center" colspan="2"><br><br><br><br><b>SIGNATURE OF HEAD OF SCHOOL/INSTITUTE/COLLEGE WITH STAMP</b></td></tr>
+
+        </tbody></table>
+
+
+
+
+    </div>
+    <div>
+        <table align="center" border="0"><tbody><tr><td align="center">
+                    <input type="button" name="submit" value="   Print   " class="btn btn-info btn-ms" onclick="CallPrint();">
+                </td></tr></tbody></table>
+    </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+    <style>
+    footer{
+        background-color: #272727;
+        color: #f2f2f2;
+        font-size: .8em;
+    }
+</style>
+
+</div>
+      <div class="clear">
+<footer>
+    <div class="container">
+        <div class="padding-10" style="text-align: center;">
+            © Copyright 2016, National Scholarship Portal
+        </div>
+    </div>
+</footer>
+     
+
+
+
+
+</div></body></html>
